@@ -563,13 +563,6 @@ while : ; do
 		if [[ $AUTO_DELETE_LOG == "1" ]]; then
 			rm -f -- "$LOG_FILE"
 		fi
-
-        	# -----------------------------------------------------------------------------
-       		# Purge certain old backups after backup finished
-        	# -----------------------------------------------------------------------------
-
-	        fn_expire_backups
-
 		EXIT_CODE="0"
 	fi
 
