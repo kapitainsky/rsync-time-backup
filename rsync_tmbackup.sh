@@ -96,10 +96,10 @@ fn_expire_backups() {
 	local current_timestamp=$EPOCH
 	local last_kept_timestamp=9999999999
 
-        # we will keep requested backup
-		backup_to_keep="$1"
-        # we will also keep the oldest backup
-        oldest_backup_to_keep="$(fn_find_backups | sort | sed -n '1p')"
+	# we will keep requested backup
+	backup_to_keep="$1"
+	# we will also keep the oldest backup
+	oldest_backup_to_keep="$(fn_find_backups | sort | sed -n '1p')"
 
 	# Process each backup dir from the oldest to the most recent
 	for backup_dir in $(fn_find_backups | sort); do
